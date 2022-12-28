@@ -1,5 +1,3 @@
-import {EndUserProps as BeDefEUP} from 'be-definitive/types';
-
 export const make = {
     ":host": {
         be: "definitive",
@@ -10,11 +8,11 @@ export const make = {
                     collapsed: true,
                     hydratingTransform: {
                         form: [{}, {
-                            click: {
-                                prop: "expanded",
-                                toggleProp: true
-                            }
-                        }]
+                                click: {
+                                    prop: "expanded",
+                                    toggleProp: true
+                                }
+                            }]
                     },
                     transform: {
                         expandP: {
@@ -37,6 +35,6 @@ export const make = {
                     }
                 }
             }
-        } as BeDefEUP,
+        },
     }
 };
