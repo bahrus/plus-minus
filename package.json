@@ -1,8 +1,24 @@
 {
   "name": "plus-minus",
   "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
+  "keywords": [
+    "web-components",
+    "web-component",
+    "custom-element",
+    "custom-elements",
+    "expandable-button"
+  ],
+  "description": "Expandable/collapsible button",
+  "main": "make.js",
+  "module": "make.js",
+  "exports": {
+    ".": "./make.js",
+    "./make.js": "./make.js"
+  },
+  "types": "types.d.ts",
+  "files": [
+    "*.*"
+  ],
   "scripts": {
     "test": "playwright test",
     "serve": "node node_modules/may-it-serve/serve.js",
@@ -22,7 +38,7 @@
     "@playwright/test": "1.29.1",
     "@skypack/package-check": "0.2.2"
   },
-  "author": "",
+  "author": "anderson.bruce.b@gmail.com",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/bahrus/plus-minus/issues"
