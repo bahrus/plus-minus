@@ -1,0 +1,18 @@
+{
+	"compilerOptions": {
+		"target": "ESNext",
+		"module":"ESNext",
+		"sourceMap": false,
+		"experimentalDecorators": false,
+		"strict": true,
+		"newLine": "LF",
+		"watch": true
+	},
+	"files": [
+		"make.ts"
+	],
+	"exclude":[
+		"node_modules"
+	]
+
+}
