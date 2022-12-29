@@ -1,11 +1,6 @@
 <plus-minus>
     <template shadowroot=open><!--begin--><!--begin-->
-        <script id=shared-plus-minus-make nomodule type=module be-having>
-            export const make = ['plus-minus/make.js', 'https://esm.run/plus-minus@0.0.1/make.js'];
-            export const definitive = {
-                impl: ['be-definitive/be-definitive.js', 'https://esm.run/be-definitive@0.0.82']
-            }
-        </script>
+
         <section> <!-- Safari can't handle forms inside shadow DOM !-->
             <button type=button name=expand part="expand button" aria-label=Expand>
                 <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-plus-square">
@@ -44,6 +39,12 @@
                 display: inline;
             }
         </style>
+        <script id=shared-plus-minus-make nomodule type=module be-having>
+            export const make = ['plus-minus/make.js', 'https://esm.run/plus-minus@0.0.1/make.js'];
+            export const definitive = {
+                impl: ['be-definitive/be-definitive.js', 'https://esm.run/be-definitive@0.0.82']
+            }
+        </script>
         <be-hive></be-hive>
     <!--end--><!--end--></template>
 </plus-minus>
