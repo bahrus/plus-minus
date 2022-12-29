@@ -7,7 +7,7 @@ export const make = {
                     expanded: false,
                     collapsed: true,
                     hydratingTransform: {
-                        form: [{}, {
+                        section: [{}, {
                                 click: {
                                     prop: "expanded",
                                     toggleProp: true
