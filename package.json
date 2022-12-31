@@ -29,9 +29,9 @@
     "url": "git+https://github.com/bahrus/plus-minus.git"
   },
   "dependencies": {
-    "be-definitive": "0.0.84",
+    "be-definitive": "0.0.87",
     "be-hive": "0.0.79",
-    "be-importing": "0.0.47"
+    "be-importing": "0.0.49"
   },
   "devDependencies": {
     "may-it-serve": "0.0.4",
