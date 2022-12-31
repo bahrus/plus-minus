@@ -31,7 +31,7 @@
   "dependencies": {
     "be-definitive": "0.0.87",
     "be-hive": "0.0.79",
-    "be-importing": "0.0.10"
+    "be-importing": "0.0.50"
   },
   "devDependencies": {
     "may-it-serve": "0.0.4",
