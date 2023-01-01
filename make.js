@@ -12,7 +12,10 @@ export const make = {
                                     prop: "expanded",
                                     toggleProp: true
                                 }
-                            }]
+                            }],
+                        button: {
+                            disabled: false,
+                        }
                     },
                     transform: {
                         expandP: {
