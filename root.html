@@ -1,6 +1,5 @@
 <plus-minus>
-    <template shadowroot=open><!--begin--><!--begin-->
-
+    <template shadowrootmode=open><!--begin--><!--begin-->
         <section> <!-- Safari can't handle forms inside shadow DOM !-->
             <button disabled type=button name=expand part="expand button" aria-label=Expand>
                 <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-plus-square">
@@ -45,14 +44,54 @@
                 impl: ['be-definitive/be-definitive.js', 'https://esm.run/be-definitive@0.0.82']
             }
         </script>
-        <be-hive></be-hive>
+        <be-hive enh-by-be-definitive='{
+            "config": {
+                "propDefaults": {
+                    "expanded": false,
+                    "collapsed": true,
+                    "hydratingTransform": {
+                        "section": [{}, {
+                            "click": {
+                                "prop": "expanded",
+                                "toggleProp": true
+                            }
+                        }],
+                        "button": {
+                            "disabled": false,
+                        }
+                    },
+                    "transform": {
+                        "expandP": {
+                            "hidden": "expanded"
+                        },
+                        "collapseP": {
+                            "hidden": "collapsed"
+                        }
+                    }
+                },
+                "propInfo": {
+                    "expanded": {
+                        "notify": {
+                            "negateTo": "collapsed",
+                            "dispatch": true,
+                            "reflectTo": {
+                                "aria": "expanded"
+                            }
+                        }
+                    }
+                }
+            }          
+        }'></be-hive>
+        <template be-active be-gone>
+            <script data-version="0.0.106" id="be-definitive/be-definitive.js"></script>
+        </template>
     <!--end--><!--end--></template>
 </plus-minus>
 <script type=module>
     if(customElements.get('be-importing') === undefined){
         import('be-importing/be-importing.js').catch(err => {
             console.debug(err);
-            import('https://esm.run/be-importing@0.0.45');
+            import('https://esm.run/be-importing@0.0.65');
         });
     }
 </script>

@@ -22,21 +22,21 @@
   "scripts": {
     "test": "playwright test",
     "serve": "node node_modules/may-it-serve/serve.js",
-    "package-check": "package-check"
+    "safari": "npx playwright wk http://localhost:3030",
+    "update": "ncu -u && npm install"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bahrus/plus-minus.git"
   },
   "dependencies": {
-    "be-definitive": "0.0.87",
-    "be-hive": "0.0.79",
-    "be-importing": "0.0.50"
+    "be-definitive": "0.0.106",
+    "be-hive": "0.0.116",
+    "be-importing": "0.0.66"
   },
   "devDependencies": {
-    "may-it-serve": "0.0.4",
-    "@playwright/test": "1.29.1",
-    "@skypack/package-check": "0.2.2"
+    "may-it-serve": "0.0.5",
+    "@playwright/test": "1.36.2"
   },
   "author": "anderson.bruce.b@gmail.com",
   "license": "MIT",
