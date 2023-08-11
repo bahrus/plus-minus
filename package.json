@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "may-it-serve": "0.0.5",
-    "@playwright/test": "1.36.2"
+    "@playwright/test": "1.37.0"
   },
   "author": "anderson.bruce.b@gmail.com",
   "license": "MIT",
