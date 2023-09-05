@@ -30,14 +30,14 @@
     "url": "git+https://github.com/bahrus/plus-minus.git"
   },
   "dependencies": {
-    "be-definitive": "0.0.107",
-    "be-hive": "0.0.116",
-    "be-importing": "0.0.66",
-    "trans-render": "0.0.701"
+    "be-definitive": "0.0.108",
+    "be-hive": "0.0.119",
+    "be-importing": "0.0.67",
+    "trans-render": "0.0.705"
   },
   "devDependencies": {
     "may-it-serve": "0.0.5",
-    "@playwright/test": "1.37.0"
+    "@playwright/test": "1.37.1"
   },
   "author": "anderson.bruce.b@gmail.com",
   "license": "MIT",
