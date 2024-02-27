@@ -35,3 +35,17 @@ Via node_modules / ES modules / import maps
 
 Via CDN:
 
+```html
+<plus-minus enh-be-importing="plus-minus/root.html"></plus-minus>
+<plus-minus></plus-minus>
+<script type=importmap>
+    {
+        "imports": {
+            "plus-minus/": "https://cdn.jsdelivr.net/npm/plus-minus@0.0.11/"
+        }
+    }
+</script>
+<script type=module src=https://esm.run/be-importing@0.0.77/behivior.js crossorigin=anonymous></script>
+<script type=module src=https://esm.run/xtal-element@0.0.596/xtal-element.js crossorigin=anonymous></script>
+```
+
