@@ -30,7 +30,7 @@ Via node_modules / ES modules / import maps
     }
 }
 </script>
-<plus-minus be-importing=plus-minus/root.html></plus-minus>
+<plus-minus enh-be-importing=plus-minus/root.html></plus-minus>
 ```
 
 Via CDN:

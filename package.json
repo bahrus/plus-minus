@@ -30,10 +30,10 @@
     "url": "git+https://github.com/bahrus/plus-minus.git"
   },
   "dependencies": {
-    "be-enhanced": "0.0.67",
-    "be-importing": "0.0.76",
-    "trans-render": "0.0.738",
-    "xtal-element": "0.0.595"
+    "be-enhanced": "0.0.68",
+    "be-importing": "0.0.77",
+    "trans-render": "0.0.739",
+    "xtal-element": "0.0.596"
   },
   "devDependencies": {
     "may-it-serve": "0.0.6",
