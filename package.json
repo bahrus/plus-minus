@@ -27,12 +27,15 @@
     "watch": "npm-watch",
     "build": "powershell -command \"node root.mjs | out-file  -encoding  oem root.html\""
   },
+  "watch": {
+    "build": "*.mjs"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bahrus/plus-minus.git"
   },
   "dependencies": {
-    "be-importing": "0.0.92"
+    "be-importing": "0.0.94"
   },
   "devDependencies": {
     "may-it-serve": "0.0.8",

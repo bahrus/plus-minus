@@ -1,6 +1,9 @@
 // @ts-check
 import { makeXtalElement } from 'be-importing/makeXtalElement.mjs';
-/** @import {Localizer, XForm, A, PropInfo} from "./node_modules/be-importing/types" */
+/** @import {Localizer} from "./node_modules/trans-render/lib/mixins/types.d.ts" */
+/** @import {XForm} from "./node_modules/trans-render/types.d.ts" */
+/** @import {Actions as A, PropInfo, Compacts} from './node_modules/trans-render/froop/types.d.ts' */
+
 /** @import {Actions, Props} from "./types" */
 
 const mainTemplate = String.raw `
@@ -112,7 +115,30 @@ export const xform = {
 
 /** @type {Partial<Props>} */
 const propDefaults = {
-    expanded: false,
     collapsed: true,
 };
+
+/** @type {Partial<{[key in keyof Props]: PropInfo}>} */
+const propInfo = {
+    expanded:{
+        def: false,
+    },
+    ariaExpanded:{
+        ip: true,
+    }
+};
+
+/** @type {Compacts<Props, Actions>}} */
+const compacts = {
+    echo_expanded_to_ariaExpanded: 0,
+    negate_expanded_to_collapsed: 0,
+};
+
+makeXtalElement({
+    mainTemplate,
+    xform,
+    propDefaults,
+    propInfo,
+    compacts,
+});
 

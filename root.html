@@ -1,3 +1,4 @@
+
 <plus-minus>
     <template shadowrootmode=open><!--begin--><!--begin-->
         <style adopt>
@@ -38,7 +39,7 @@
                 </svg>
             </button>
         </section>
-        <xtal-element
+        <!-- <xtal-element
             xform='{
                 "% collapsed": {
                     "negTo": "hidden"
@@ -76,7 +77,47 @@
                     }
                 }
             }'
-        ></xtal-element>
+        ></xtal-element> -->
 
-    <!--end--><!--end--></template>
+    
+<xtal-element
+ prop-defaults='{
+   "collapsed": true
+}'
+ prop-info='{
+   "expanded": {
+      "def": false
+   },
+   "ariaExpanded": {
+      "ip": true
+   }
+}' 
+ xform='{
+   "% collapsed": {
+      "negTo": "hidden"
+   },
+   "% expanded": {
+      "negTo": "hidden"
+   },
+   "section": {
+      "m": {
+         "on": "click",
+         "toggle": "expanded"
+      }
+   },
+   "button": {
+      "d": 0,
+      "s": {
+         "disabled": false
+      }
+   }
+}' 
+ compacts='{
+   "echo_expanded_to_ariaExpanded": 0,
+   "negate_expanded_to_collapsed": 0
+}'
+></xtal-element>
+<!--end--><!--end-->
+</template>
 </plus-minus>
+
