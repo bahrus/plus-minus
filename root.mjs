@@ -47,46 +47,6 @@ const mainTemplate = String.raw `
                 </svg>
             </button>
         </section>
-        <!-- <xtal-element
-            xform='{
-                "% collapsed": {
-                    "negTo": "hidden"
-                },
-                "% expanded": {
-                    "negTo": "hidden"
-                },
-                "section": {
-                    "m": {
-                        "on": "click",
-                        "toggle": "expanded"
-                    }
-                },
-                "button": {
-                    "d": 0,
-                    "s": {
-                        "disabled": false
-                    }
-                }
-            }'
-
-            prop-defaults='{
-                    "expanded": false,
-                    "collapsed": true
-                }
-            '
-            prop-info='{
-                "expanded": {
-                    "notify": {
-                        "negateTo": "collapsed",
-                        "dispatch": true,
-                        "reflectTo": {
-                            "aria": "expanded"
-                        }
-                    }
-                }
-            }'
-        ></xtal-element> -->
-
     <!--end--><!--end--></template>
 </plus-minus>
 `;
