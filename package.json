@@ -23,7 +23,9 @@
     "test": "playwright test",
     "serve": "node node_modules/may-it-serve/serve.js",
     "safari": "npx playwright wk http://localhost:3030",
-    "update": "ncu -u && npm install"
+    "update": "ncu -u && npm install",
+    "watch": "npm-watch",
+    "build": "powershell -command \"node root.mjs | out-file  -encoding  oem root.html\""
   },
   "repository": {
     "type": "git",
@@ -34,7 +36,8 @@
   },
   "devDependencies": {
     "may-it-serve": "0.0.8",
-    "@playwright/test": "1.45.3"
+    "@playwright/test": "1.45.3",
+    "npm-watch": "0.13.0"
   },
   "author": "anderson.bruce.b@gmail.com",
   "license": "MIT",
