@@ -30,14 +30,11 @@
     "url": "git+https://github.com/bahrus/plus-minus.git"
   },
   "dependencies": {
-    "be-enhanced": "0.0.68",
-    "be-importing": "0.0.77",
-    "trans-render": "0.0.741",
-    "xtal-element": "0.0.598"
+    "be-importing": "0.0.92"
   },
   "devDependencies": {
-    "may-it-serve": "0.0.6",
-    "@playwright/test": "1.42.0"
+    "may-it-serve": "0.0.8",
+    "@playwright/test": "1.45.3"
   },
   "author": "anderson.bruce.b@gmail.com",
   "license": "MIT",
