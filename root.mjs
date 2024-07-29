@@ -4,7 +4,7 @@ import { makeXtalElement } from 'be-importing/makeXtalElement.mjs';
 /** @import {XForm} from "./node_modules/trans-render/types.d.ts" */
 /** @import {Actions as A, PropInfo, Compacts} from './node_modules/trans-render/froop/types.d.ts' */
 
-/** @import {Actions, Props} from "./types" */
+/** @import {Actions, AP} from "./types" */
 
 const mainTemplate = String.raw `
 <plus-minus>
@@ -47,11 +47,16 @@ const mainTemplate = String.raw `
                 </svg>
             </button>
         </section>
+        <template onload=blow-dry-to-head>
+            <script type=module>
+                import 'plus-minus/base.js';
+            </script>
+        </template>
     <!--end--><!--end--></template>
 </plus-minus>
 `;
 
-/** @type {XForm<Props, Actions & Localizer>} */
+/** @type {XForm<AP, Actions & Localizer>} */
 export const xform = {
     "% collapsed": {
         "negTo": "hidden"
@@ -73,32 +78,54 @@ export const xform = {
     }
 };
 
-/** @type {Partial<Props>} */
+/** @type {Partial<AP>} */
 const propDefaults = {
     collapsed: true,
 };
 
-/** @type {Partial<{[key in keyof Props]: PropInfo}>} */
+/** @type {Partial<{[key in keyof AP]: PropInfo}>} */
 const propInfo = {
     expanded:{
         def: false,
     },
     ariaExpanded:{
+        type: 'Boolean',
         ip: true,
-    }
+        attrName: 'aria-expanded',
+        parse: true,
+    },
+    ariaControls:{
+        type: 'String',
+        ip: true,
+        attrName: 'aria-controls',
+        parse: true,
+    },
+    controls: {},
+
 };
 
-/** @type {Compacts<Props, Actions>}} */
+/** @type {A<AP, Actions>} */
+const actions = {
+    changeVisibility:{
+        ifKeyIn: ['expanded'],
+        ifAllOf: ['controls']
+    }
+}
+
+/** @type {Compacts<AP, Actions>}} */
 const compacts = {
     echo_expanded_to_ariaExpanded: 0,
     negate_expanded_to_collapsed: 0,
+    when_ariaControls_changes_invoke_onAriaControls: 0,
 };
 
 makeXtalElement({
+    inherits: 'plus-minus-base',
     mainTemplate,
     xform,
     propDefaults,
     propInfo,
+    actions,
     compacts,
 });
 

@@ -39,48 +39,14 @@
                 </svg>
             </button>
         </section>
-        <!-- <xtal-element
-            xform='{
-                "% collapsed": {
-                    "negTo": "hidden"
-                },
-                "% expanded": {
-                    "negTo": "hidden"
-                },
-                "section": {
-                    "m": {
-                        "on": "click",
-                        "toggle": "expanded"
-                    }
-                },
-                "button": {
-                    "d": 0,
-                    "s": {
-                        "disabled": false
-                    }
-                }
-            }'
-
-            prop-defaults='{
-                    "expanded": false,
-                    "collapsed": true
-                }
-            '
-            prop-info='{
-                "expanded": {
-                    "notify": {
-                        "negateTo": "collapsed",
-                        "dispatch": true,
-                        "reflectTo": {
-                            "aria": "expanded"
-                        }
-                    }
-                }
-            }'
-        ></xtal-element> -->
-
+        <template onload=blow-dry-to-head>
+            <script type=module>
+                import 'plus-minus/base.js';
+            </script>
+        </template>
     
 <xtal-element
+ inherits=plus-minus-base 
  prop-defaults='{
    "collapsed": true
 }'
@@ -89,8 +55,18 @@
       "def": false
    },
    "ariaExpanded": {
-      "ip": true
-   }
+      "type": "Boolean",
+      "ip": true,
+      "attrName": "aria-expanded",
+      "parse": true
+   },
+   "ariaControls": {
+      "type": "String",
+      "ip": true,
+      "attrName": "aria-controls",
+      "parse": true
+   },
+   "controls": {}
 }' 
  xform='{
    "% collapsed": {
@@ -112,9 +88,20 @@
       }
    }
 }' 
+ actions='{
+   "changeVisibility": {
+      "ifKeyIn": [
+         "expanded"
+      ],
+      "ifAllOf": [
+         "controls"
+      ]
+   }
+}' 
  compacts='{
    "echo_expanded_to_ariaExpanded": 0,
-   "negate_expanded_to_collapsed": 0
+   "negate_expanded_to_collapsed": 0,
+   "when_ariaControls_changes_invoke_onAriaControls": 0
 }'
 ></xtal-element>
 <!--end--><!--end-->
