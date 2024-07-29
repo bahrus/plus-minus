@@ -7,6 +7,8 @@
 
 Web component that provides toggling plus/minus buttons, useful for expand/collapse functionality.
 
+Is designed from the ground up to be SSR/SSG compatible.
+
 ## Installation
 
 Via node_modules / ES modules / import maps
@@ -55,4 +57,8 @@ Via CDN:
 <script type=module src=https://esm.run/be-importing@0.0.77/behivior.js crossorigin=anonymous></script>
 <script type=module src=https://esm.run/xtal-element@0.0.596/xtal-element.js crossorigin=anonymous></script>
 ```
+
+## SSR/SSG
+
+Simply embed root.html in the HTML stream for the first instance, and just the *plus-minus* tag or subsequent instances.  Or if you prefer, embed root.html for each instance of the web component on the server (performance may vary with each approach)
 
