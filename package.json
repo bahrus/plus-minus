@@ -9,11 +9,11 @@
     "expandable-button"
   ],
   "description": "Expandable/collapsible button",
-  "main": "make.js",
-  "module": "make.js",
+  "main": "base.js",
+  "module": "base.js",
   "exports": {
-    ".": "./make.js",
-    "./make.js": "./make.js"
+    ".": "./base.js",
+    "./base.js": "./base.js"
   },
   "types": "types.d.ts",
   "files": [

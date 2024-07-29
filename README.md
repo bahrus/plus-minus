@@ -31,17 +31,24 @@ Via node_modules / ES modules / import maps
 }
 </script>
 <plus-minus enh-be-importing=plus-minus/root.html></plus-minus>
+<plus-minus aria-controls=i-am-here></plus-minus>
+<section id=i-am-here>
+    hello
+</section>
 ```
 
 Via CDN:
 
 ```html
 <plus-minus enh-be-importing="plus-minus/root.html"></plus-minus>
-<plus-minus></plus-minus>
+<plus-minus aria-controls=i-am-here></plus-minus>
+<section id=i-am-here>
+    hello
+</section>
 <script type=importmap>
     {
         "imports": {
-            "plus-minus/": "https://cdn.jsdelivr.net/npm/plus-minus@0.0.11/"
+            "plus-minus/": "https://cdn.jsdelivr.net/npm/plus-minus@0.0.12/"
         }
     }
 </script>
