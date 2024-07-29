@@ -100,6 +100,7 @@ const propInfo = {
         attrName: 'aria-controls',
         parse: true,
     },
+    refsNotFound: {},
     controls: {},
 
 };
@@ -117,6 +118,7 @@ const compacts = {
     echo_expanded_to_ariaExpanded: 0,
     negate_expanded_to_collapsed: 0,
     when_ariaControls_changes_invoke_onAriaControls: 0,
+    when_controls_changes_invoke_addBeforeMatchListeners: 0,
 };
 
 makeXtalElement({

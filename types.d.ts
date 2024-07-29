@@ -7,13 +7,14 @@ export interface EndUserProps {
 }
 
 export interface AP extends EndUserProps{
-    controls: Array<WeakRef<Element>>
+    controls: Array<WeakRef<Element>>,
+    refsNotFound: Set<string>,
 }
 
 export type PAP = Partial<AP>
 
 export interface Actions {
     onAriaControls(self: AP & HTMLElement): PAP;
-
     changeVisibility(self: AP): void;
+    addBeforeMatchListeners(self: AP): void;
 }
