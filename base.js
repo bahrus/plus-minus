@@ -15,7 +15,7 @@ class Base extends Mount {
         for(const control of controls){
             const ref = /** @type {HTMLElement} */ (control.deref());
             if(ref === undefined) continue;
-            ref.hidden = !expanded;
+            ref.hidden = !expanded ? 'until-found': false;
         }
     }
     /**
