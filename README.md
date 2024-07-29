@@ -43,10 +43,13 @@ Via CDN:
 
 ```html
 <plus-minus enh-be-importing="plus-minus/root.html"></plus-minus>
-<plus-minus aria-controls=i-am-here></plus-minus>
-<section id=i-am-here>
-    hello
-</section>
+<details>
+    <summary>another test</summary>
+    <plus-minus aria-controls=i-am-here></plus-minus>
+    <section id=i-am-here hidden=until-found>
+        hello
+    </section>
+</details>
 <script type=importmap>
     {
         "imports": {
