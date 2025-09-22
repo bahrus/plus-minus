@@ -21,7 +21,7 @@
   ],
   "scripts": {
     "test": "playwright test",
-    "serve": "node node_modules/may-it-serve/serve.js",
+    "serve": "node ./node_modules/spa-ssi/serve.js",
     "safari": "npx playwright wk http://localhost:3030",
     "update": "ncu -u && npm install",
     "watch": "npm-watch",
@@ -35,11 +35,11 @@
     "url": "git+https://github.com/bahrus/plus-minus.git"
   },
   "dependencies": {
-    "be-importing": "0.0.95"
+    "be-importing": "0.0.98"
   },
   "devDependencies": {
-    "may-it-serve": "0.0.8",
-    "@playwright/test": "1.45.3",
+    "spa-ssi": "0.0.17",
+    "@playwright/test": "1.55.0",
     "npm-watch": "0.13.0"
   },
   "author": "anderson.bruce.b@gmail.com",
