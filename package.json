@@ -35,11 +35,12 @@
     "url": "git+https://github.com/bahrus/plus-minus.git"
   },
   "dependencies": {
-    "be-importing": "0.0.99"
+    "be-importing": "0.0.99",
+    "trans-render": "0.0.959"
   },
   "devDependencies": {
-    "spa-ssi": "0.0.18",
-    "@playwright/test": "1.55.0",
+    "spa-ssi": "0.0.19",
+    "@playwright/test": "1.55.1",
     "npm-watch": "0.13.0"
   },
   "author": "anderson.bruce.b@gmail.com",

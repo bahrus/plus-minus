@@ -1,10 +1,10 @@
 // @ts-check
 import { makeXtalElement } from 'be-importing/makeXtalElement.mjs';
-/** @import {Localizer} from "./node_modules/trans-render/lib/mixins/types.d.ts" */
+/** @import {Localizer} from "../node_modules/trans-render/lib/mixins/types" */
 /** @import {XForm} from "./node_modules/trans-render/types.d.ts" */
 /** @import {Actions as A, PropInfo, Compacts} from './node_modules/trans-render/froop/types.d.ts' */
 
-/** @import {Actions, AP} from "./types" */
+/** @import {Actions, AP} from "../types" */
 
 const mainTemplate = String.raw `
 <plus-minus>
@@ -120,21 +120,6 @@ const compacts = {
     when_ariaControls_changes_invoke_onAriaControls: 0,
     when_controls_changes_invoke_addBeforeMatchListeners: 0,
 };
-
-export function render(){
-    /** @type {string[]} */
-    const pieces = [];
-    makeXtalElement({
-        inherits: 'plus-minus-base',
-        mainTemplate,
-        xform,
-        propDefaults,
-        propInfo,
-        actions,
-        compacts 
-    }, (s) => pieces.push(s));
-    return pieces.join('');
-}
 
 makeXtalElement({
     inherits: 'plus-minus-base',
