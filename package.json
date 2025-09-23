@@ -35,10 +35,10 @@
     "url": "git+https://github.com/bahrus/plus-minus.git"
   },
   "dependencies": {
-    "be-importing": "0.0.98"
+    "be-importing": "0.0.99"
   },
   "devDependencies": {
-    "spa-ssi": "0.0.17",
+    "spa-ssi": "0.0.18",
     "@playwright/test": "1.55.0",
     "npm-watch": "0.13.0"
   },
