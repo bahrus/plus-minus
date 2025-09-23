@@ -59,15 +59,15 @@ const mainTemplate = String.raw `
 /** @type {XForm<AP, Actions & Localizer>} */
 export const xform = {
     "% collapsed": {
-        "negTo": "hidden"
+        negTo: "hidden"
     },
     "% expanded": {
-        "negTo": "hidden"
+        negTo: "hidden"
     },
     section: {
-        "m": {
-            "on": "click",
-            "toggle": "expanded"
+        m: {
+            on: "click",
+            toggle: "expanded"
         }
     },
     button: {
