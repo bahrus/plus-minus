@@ -39,7 +39,7 @@
     "trans-render": "0.0.959"
   },
   "devDependencies": {
-    "spa-ssi": "0.0.19",
+    "spa-ssi": "0.0.23",
     "@playwright/test": "1.55.1",
     "npm-watch": "0.13.0"
   },
