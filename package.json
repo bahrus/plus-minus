@@ -25,10 +25,7 @@
     "safari": "npx playwright wk http://localhost:3030",
     "update": "ncu -u && npm install",
     "watch": "npm-watch",
-    "build": "powershell -command \"node root.mjs | out-file  -encoding  oem root.html\""
-  },
-  "watch": {
-    "build": "*.mjs"
+    "build": "powershell -command \"node build.mjs | out-file  -encoding  oem root.html\""
   },
   "repository": {
     "type": "git",
@@ -40,8 +37,7 @@
   },
   "devDependencies": {
     "spa-ssi": "0.0.23",
-    "@playwright/test": "1.55.1",
-    "npm-watch": "0.13.0"
+    "@playwright/test": "1.55.1"
   },
   "author": "anderson.bruce.b@gmail.com",
   "license": "MIT",
