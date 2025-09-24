@@ -133,13 +133,3 @@ export function render(){
     return pieces.join('');
 }
 
-// makeXtalElement({
-//     inherits: 'plus-minus-base',
-//     mainTemplate,
-//     xform,
-//     propDefaults,
-//     propInfo,
-//     actions,
-//     compacts,
-// });
-
