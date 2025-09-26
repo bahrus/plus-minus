@@ -129,7 +129,7 @@ export function render(){
         propInfo,
         actions,
         compacts 
-    }, (s) => pieces.push(s));
+    }, s => pieces.push(s));
     return pieces.join('');
 }
 
