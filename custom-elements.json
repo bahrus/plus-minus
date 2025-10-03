@@ -44,23 +44,23 @@
           "cssParts": [
             {
               "name": "collapsed",
-              "description": ""
+              "description": "Button that shows in collapsed state"
             },
             {
               "name": "expanded",
-              "description": ""
+              "description": "Button that shows in expanded state"
             },
             {
               "name": "expand",
-              "description": ""
+              "description": "The expand icon"
             },
             {
               "name": "collapse",
-              "description": ""
+              "description": "The collapse icon"
             },
             {
               "name": "button",
-              "description": ""
+              "description": "The main button element"
             }
           ],
           "slots": [],
