@@ -41,7 +41,28 @@
               "name": "aria-controls"
             }
           ],
-          "cssParts": [],
+          "cssParts": [
+            {
+              "name": "collapsed",
+              "description": ""
+            },
+            {
+              "name": "expanded",
+              "description": ""
+            },
+            {
+              "name": "expand",
+              "description": ""
+            },
+            {
+              "name": "collapse",
+              "description": ""
+            },
+            {
+              "name": "button",
+              "description": ""
+            }
+          ],
           "slots": [],
           "events": []
         }
