@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "",
+      "declarations": [
+        {
+          "name": "PlusMinus",
+          "customElement": true,
+          "members": [
+            {
+              "kind": "field",
+              "name": "expanded"
+            },
+            {
+              "kind": "field",
+              "name": "collapsed"
+            },
+            {
+              "kind": "field",
+              "name": "ariaExpanded"
+            },
+            {
+              "kind": "field",
+              "name": "ariaControls"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "expanded"
+            },
+            {
+              "name": "collapsed"
+            },
+            {
+              "name": "aria-expanded"
+            },
+            {
+              "name": "aria-controls"
+            }
+          ],
+          "cssParts": [],
+          "slots": [],
+          "events": []
+        }
+      ]
+    }
+  ]
+}
