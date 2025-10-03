@@ -8,6 +8,7 @@
     "custom-elements",
     "expandable-button"
   ],
+  "type":"module",
   "description": "Expandable/collapsible button",
   "main": "base.js",
   "module": "base.js",
@@ -22,6 +23,7 @@
   "scripts": {
     "test": "playwright test",
     "serve": "node ./node_modules/spa-ssi/serve.js",
+     "build-manifest": "node doc.mjs > custom-elements.json",
     "safari": "npx playwright wk http://localhost:3030",
     "update": "ncu -u && npm install",
     "watch": "npm-watch",
@@ -33,9 +35,10 @@
   },
   "dependencies": {
     "be-importing": "0.0.99",
-    "trans-render": "0.0.959"
+    "trans-render": "0.0.960"
   },
   "devDependencies": {
+    "wc-info": "0.0.167",
     "spa-ssi": "0.0.23",
     "@playwright/test": "1.55.1"
   },

@@ -1,3 +1,5 @@
+import {SimpleWCInfo} from './ts-refs/wc-info/SimpleWCInfo';
+
 export interface EndUserProps {
     expanded: boolean,
     collapsed: boolean,
@@ -18,3 +20,12 @@ export interface Actions {
     changeVisibility(self: AP): void;
     addBeforeMatchListeners(self: AP): void;
 }
+
+export abstract class PlusMinus implements SimpleWCInfo {
+    src: './root.mjs';
+    tagName: 'plus-minus';
+    props: EndUserProps;
+
+}
+
+export type Package = [PlusMinus]
