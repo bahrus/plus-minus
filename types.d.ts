@@ -25,6 +25,13 @@ export abstract class PlusMinus implements SimpleWCInfo {
     src: './root.mjs';
     tagName: 'plus-minus';
     props: EndUserProps;
+    cssParts?: {
+        collapsed: 'Button that shows in collapsed state',
+        expanded: 'Button that shows in expanded state',
+        expand: 'The expand icon',
+        collapse : 'The collapse icon',
+        button: 'The main button element'
+    };
 
 }
 
