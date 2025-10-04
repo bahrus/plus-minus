@@ -56,7 +56,7 @@ const mainTemplate = String.raw `
 </plus-minus>
 `;
 
-/** @type {XForm<AP, Actions & Localizer>} */
+/** @type {XForm<AP, Actions>} */
 export const xform = {
     "% collapsed": {
         negTo: "hidden"
