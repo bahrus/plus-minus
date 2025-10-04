@@ -45,22 +45,20 @@ Via CDN:
 
 ```html
 <plus-minus enh-be-importing="plus-minus/root.html"></plus-minus>
-<details>
-    <summary>another test</summary>
-    <plus-minus aria-controls=i-am-here></plus-minus>
-    <section id=i-am-here hidden=until-found>
-        hello
-    </section>
-</details>
+<plus-minus aria-controls=i-am-here></plus-minus>
+<section id=i-am-here>
+    hello
+</section>
 <script type=importmap>
     {
         "imports": {
-            "plus-minus/": "https://cdn.jsdelivr.net/npm/plus-minus@0.0.12/"
+            "plus-minus/": "https://cdn.jsdelivr.net/npm/plus-minus@0.0.13/",
+            "trans-render/": "https://esm.sh/trans-render@0.0.960/"
         }
     }
 </script>
-<script type=module src=https://esm.run/be-importing@0.0.77/behivior.js crossorigin=anonymous></script>
-<script type=module src=https://esm.run/xtal-element@0.0.596/xtal-element.js crossorigin=anonymous></script>
+<script type=module src=https://esm.sh/be-importing@0.0.101/emc.js crossorigin=anonymous></script>
+<script type=module src=https://esm.sh/xtal-element@0.0.635/index.js crossorigin=anonymous></script>
 ```
 
 ## SSR/SSG
