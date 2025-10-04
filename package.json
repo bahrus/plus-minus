@@ -16,9 +16,10 @@
     ".": "./base.js",
     "./base.js": "./base.js"
   },
-  "types": "types.d.ts",
+  "types": "./types.d.ts",
   "files": [
-    "*.*"
+    "*.*",
+    "./ts-refs/wc-info/**/*"
   ],
   "scripts": {
     "test": "playwright test",
