@@ -1,6 +1,6 @@
 {
   "name": "plus-minus",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "keywords": [
     "web-components",
     "web-component",
@@ -8,7 +8,7 @@
     "custom-elements",
     "expandable-button"
   ],
-  "type":"module",
+  "type": "module",
   "description": "Expandable/collapsible button",
   "main": "base.js",
   "module": "base.js",
