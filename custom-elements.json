@@ -12,33 +12,41 @@
           "members": [
             {
               "kind": "field",
-              "name": "expanded"
+              "name": "expanded",
+              "description": "If true, the button is in expanded state"
             },
             {
               "kind": "field",
-              "name": "collapsed"
+              "name": "collapsed",
+              "description": "If true, the button is in collapsed state"
             },
             {
               "kind": "field",
-              "name": "ariaExpanded"
+              "name": "ariaExpanded",
+              "description": "Global attribute inheritance"
             },
             {
               "kind": "field",
-              "name": "ariaControls"
+              "name": "ariaControls",
+              "description": "IDs of the elements that are controlled by this button"
             }
           ],
           "attributes": [
             {
-              "name": "expanded"
+              "name": "expanded",
+              "description": "If true, the button is in expanded state"
             },
             {
-              "name": "collapsed"
+              "name": "collapsed",
+              "description": "If true, the button is in collapsed state"
             },
             {
-              "name": "aria-expanded"
+              "name": "aria-expanded",
+              "description": "Global attribute inheritance"
             },
             {
-              "name": "aria-controls"
+              "name": "aria-controls",
+              "description": "IDs of the elements that are controlled by this button"
             }
           ],
           "cssParts": [
