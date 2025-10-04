@@ -9,6 +9,8 @@ Web component that provides toggling plus/minus buttons, useful for expand/colla
 
 Is designed from the ground up to be SSR/SSG compatible.
 
+
+
 ## Installation
 
 Via node_modules / ES modules / import maps
