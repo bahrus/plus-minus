@@ -17,22 +17,18 @@ Via node_modules / ES modules / import maps
 
 ```html
 <script type=importmap>
-{
-    "imports": {
-        "be-based/": "../node_modules/be-based/",
-        "be-decorated/": "../node_modules/be-decorated/",
-        "be-definitive/": "../node_modules/be-definitive/",
-        "be-exportable/": "../node_modules/be-exportable/",
-        "be-having/": "../node_modules/be-having/",
-        "be-hive/": "../node_modules/be-hive/",
-        "be-importing/": "../node_modules/be-importing/",
-        "be-written/": "../node_modules/be-written/",
-        "plus-minus/": "../node_modules/plus-minus/",
-        "stream-orator/": "../node_modules/stream-orator/",
-        "trans-render/": "../node_modules/trans-render/",
-        "xtal-element/": "../node_modules/xtal-element/"
+<script type="importmap">
+    {
+        "imports": {
+            "blow-dry/": "/node_modules/blow-dry/",
+            "imp-h/": "/node_modules/imp-h/",
+            "mount-observer/": "/node_modules/mount-observer/",
+            "trans-render/": "/node_modules/trans-render/",
+            "xtal-element/": "/node_modules/xtal-element/",
+            "plus-minus/": "/node_modules/plus-minus"
+        }
     }
-}
+</script>
 </script>
 <plus-minus enh-be-importing=plus-minus/root.html></plus-minus>
 <plus-minus aria-controls=i-am-here></plus-minus>
