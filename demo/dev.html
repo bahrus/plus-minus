@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev</title>
     <!-- #include virtual="/imports.html" -->
-    <script type=module>
-        import 'be-importing/index.js';
-    </script>
+
 </head>
 <body>
-    <plus-minus enh-be-importing="plus-minus/root.mjs"></plus-minus>
+    <plus-minus imp-h="plus-minus/root.mjs"></plus-minus>
     <details>
         <summary>Another test</summary>
         <plus-minus aria-controls=i-am-here></plus-minus>
@@ -18,6 +16,9 @@
             hello
         </section>
     </details>
-
+    <script type=module>
+        import 'imp-h/imp-h.js';
+        import 'xtal-element/index.js';
+    </script>
 </body>
 </html>
