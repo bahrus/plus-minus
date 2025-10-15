@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <plus-minus enh-be-importing="plus-minus/root.html"></plus-minus>
+    <plus-minus imp-h="plus-minus/root.html"></plus-minus>
     <plus-minus aria-controls=i-am-here></plus-minus>
     <section id=i-am-here>
         hello
@@ -14,12 +14,12 @@
     <script type=importmap>
         {
             "imports": {
-                "plus-minus/": "https://cdn.jsdelivr.net/npm/plus-minus@0.0.13/",
+                "plus-minus/": "https://cdn.jsdelivr.net/npm/plus-minus@0.0.14/",
                 "trans-render/": "https://esm.sh/trans-render@0.0.960/"
             }
         }
     </script>
-    <script type=module src=https://esm.sh/be-importing@0.0.101/emc.js crossorigin=anonymous></script>
+    <script type=module src=https://esm.sh/imp-h@0.0.1 crossorigin="anonymous"></script>
     <script type=module src=https://esm.sh/xtal-element@0.0.635/index.js crossorigin=anonymous></script>
 </body>
 </html>
