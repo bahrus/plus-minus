@@ -39,7 +39,7 @@
     "imp-h": "0.0.1",
     "be-importing": "0.0.101",
     "trans-render": "0.0.960",
-    "xtal-element": "0.0.635"
+    "xtal-element": "0.0.636"
   },
   "devDependencies": {
     "wc-info": "0.0.185",
