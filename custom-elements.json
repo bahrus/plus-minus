@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "2.1.0",
   "readme": "",
   "modules": [
     {
@@ -7,28 +7,41 @@
       "path": "",
       "declarations": [
         {
+          "tagName": "plus-minus",
           "name": "PlusMinus",
           "customElement": true,
           "members": [
             {
               "kind": "field",
               "name": "expanded",
-              "description": "If true, the button is in expanded state"
+              "description": "If true, the button is in expanded state",
+              "type": {
+                "text": "boolean"
+              }
             },
             {
               "kind": "field",
               "name": "collapsed",
-              "description": "If true, the button is in collapsed state"
+              "description": "If true, the button is in collapsed state",
+              "type": {
+                "text": "boolean"
+              }
             },
             {
               "kind": "field",
               "name": "ariaExpanded",
-              "description": "Global attribute inheritance"
+              "description": "Global attribute inheritance",
+              "type": {
+                "text": "boolean"
+              }
             },
             {
               "kind": "field",
               "name": "ariaControls",
-              "description": "IDs of the elements that are controlled by this button"
+              "description": "IDs of the elements that are controlled by this button",
+              "type": {
+                "text": "string"
+              }
             }
           ],
           "attributes": [
