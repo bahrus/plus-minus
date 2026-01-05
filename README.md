@@ -30,7 +30,7 @@ Via node_modules / ES modules / import maps
     }
 </script>
 </script>
-<plus-minus enh-be-importing=plus-minus/root.html></plus-minus>
+<plus-minus imp-h="plus-minus/root.html"></plus-minus>
 <plus-minus aria-controls=i-am-here></plus-minus>
 <section id=i-am-here>
     hello
@@ -40,7 +40,7 @@ Via node_modules / ES modules / import maps
 Via CDN:
 
 ```html
-<plus-minus enh-be-importing="plus-minus/root.html"></plus-minus>
+<plus-minus imp-h="plus-minus/root.html"></plus-minus>
 <plus-minus aria-controls=i-am-here></plus-minus>
 <section id=i-am-here>
     hello
