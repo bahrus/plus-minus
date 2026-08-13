@@ -44,13 +44,9 @@
                 import 'plus-minus/base.js';
             </script>
         </template>
-    
-<xtal-element
- inherits=plus-minus-base 
- prop-defaults='{
+    <xtal-element inherits=plus-minus-base  prop-defaults='{
    "collapsed": true
-}'
- prop-info='{
+}' prop-info='{
    "expanded": {
       "def": false
    },
@@ -68,8 +64,7 @@
    },
    "refsNotFound": {},
    "controls": {}
-}' 
- xform='{
+}'  xform='{
    "% collapsed": {
       "negTo": "hidden"
    },
@@ -83,13 +78,9 @@
       }
    },
    "button": {
-      "d": 0,
-      "s": {
-         "disabled": false
-      }
+      "nudge": true
    }
-}' 
- actions='{
+}'  actions='{
    "changeVisibility": {
       "ifKeyIn": [
          "expanded"
@@ -98,15 +89,11 @@
          "controls"
       ]
    }
-}' 
- compacts='{
+}'  compacts='{
    "echo_expanded_to_ariaExpanded": 0,
    "negate_expanded_to_collapsed": 0,
-   "when_ariaControls_changes_invoke_onAriaControls": 0,
-   "when_controls_changes_invoke_addBeforeMatchListeners": 0
-}'
-></xtal-element>
-<!--end--><!--end-->
-</template>
+   "when_ariaControls_changes_call_onAriaControls": 0,
+   "when_controls_changes_call_addBeforeMatchListeners": 0
+}'></xtal-element><!--end--><!--end--></template>
 </plus-minus>
 

@@ -1,8 +1,8 @@
 // @ts-check
-import { makeXtalElement } from 'be-importing/makeXtalElement.mjs';
-/** @import {Localizer} from "../node_modules/trans-render/lib/mixins/types" */
-/** @import {XForm} from "./node_modules/trans-render/types.d.ts" */
-/** @import {Actions as A, PropInfo, Compacts} from './node_modules/trans-render/froop/types.d.ts' */
+import { makeXtalElement } from 'xtal-element/makeXtalElement.mjs';
+/** @import {Localizer} from "./node_modules/trans-render/lib/mixins/types" */
+/** @import {XForm} from "./ts-refs/trans-render/types.d.ts" */
+/** @import {Actions as A, PropInfo, Compacts} from './ts-refs/trans-render/froop/types.d.ts' */
 
 /** @import {Actions, AP} from "../types" */
 
@@ -56,25 +56,22 @@ const mainTemplate = String.raw `
 </plus-minus>
 `;
 
-/** @type {XForm<AP, Actions & Localizer>} */
+/** @type {XForm<AP, Actions>} */
 export const xform = {
     "% collapsed": {
-        "negTo": "hidden"
+        negTo: "hidden"
     },
     "% expanded": {
-        "negTo": "hidden"
+        negTo: "hidden"
     },
     section: {
-        "m": {
-            "on": "click",
-            "toggle": "expanded"
+        m: {
+            on: "click",
+            toggle: "expanded"
         }
     },
     button: {
-        "d": 0,
-        "s": {
-            "disabled": false
-        }
+        nudge: true,
     }
 };
 
@@ -117,17 +114,22 @@ const actions = {
 const compacts = {
     echo_expanded_to_ariaExpanded: 0,
     negate_expanded_to_collapsed: 0,
-    when_ariaControls_changes_invoke_onAriaControls: 0,
-    when_controls_changes_invoke_addBeforeMatchListeners: 0,
+    when_ariaControls_changes_call_onAriaControls: 0,
+    when_controls_changes_call_addBeforeMatchListeners: 0,
 };
 
-makeXtalElement({
-    inherits: 'plus-minus-base',
-    mainTemplate,
-    xform,
-    propDefaults,
-    propInfo,
-    actions,
-    compacts,
-});
+export function render(){
+    /** @type {string[]} */
+    const pieces = [];
+    makeXtalElement({
+        inherits: 'plus-minus-base',
+        mainTemplate,
+        xform,
+        propDefaults,
+        propInfo,
+        actions,
+        compacts 
+    }, s => pieces.push(s));
+    return pieces.join('');
+}
 
