@@ -28,6 +28,7 @@
     "safari": "npx playwright wk http://localhost:8000",
     "update": "ncu -u && npm install",
     "watch": "npm-watch",
+    "build-el-maker": "node --watch el-maker.mjs",
     "build-html": "powershell -command \"node build.mjs | out-file  -encoding  oem root.html\"",
     "build": "npm run build-html & npm run build-manifest"
   },
