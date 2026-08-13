@@ -17,8 +17,22 @@ const props = {
     expanded: 'expanded'
 };
 
+/**
+ * @type {RoundaboutOptions<EndUserProps>}
+ */
+const raConfig = {
+
+}
+
 /** @type {ElMakerConfig<EndUserProps>} */
 const features = {
+    assignFeatures: {
+        roundabout: {
+            customData: {
+
+            }
+        }
+    }
 }
 
 export function render() {
