@@ -5,18 +5,19 @@ export interface EndUserProps {
      * If true, the button is in expanded state
      */
     expanded: boolean,
-    /**
-     * If true, the button is in collapsed state
-     */
-    collapsed: boolean,
-    /**
-     * Global attribute inheritance
-     */
-    ariaExpanded: boolean,
-    /**
-     * IDs of the elements that are controlled by this button
-     */
+    // /**
+    //  * If true, the button is in collapsed state
+    //  */
+    // collapsed: boolean,
+    // /**
+    //  * Global attribute inheritance
+    //  */
+    // ariaExpanded: boolean,
+    // /**
+    //  * IDs of the elements that are controlled by this button
+    //  */
     ariaControls: string,
+    disabled: boolean,
     
 }
 

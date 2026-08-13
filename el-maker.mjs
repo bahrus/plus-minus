@@ -5,7 +5,6 @@ import { resolve } from 'path';
 import { fileURLToPath } from 'url';
 import {akaMethods as m, aka, builtInEmoji} from 'assign-gingerly/DX/emojis.js';
 
-/** @import {FontFaceFeatureConfig} from './types/font-face-feature/types'; */
 /** @import {EndUserProps} from './types'; */
 /** @import {RoundaboutOptions} from './types/roundabout/types' */
 /** @import {ElMakerConfig} from './types/el-maker/types' */
@@ -14,14 +13,34 @@ import {akaMethods as m, aka, builtInEmoji} from 'assign-gingerly/DX/emojis.js';
  * @type {{ [K in keyof EndUserProps]: K }}
  */
 const props = {
-    expanded: 'expanded'
+    expanded: 'expanded',
+    ariaControls: 'ariaControls',
+    disabled: 'disabled',
 };
 
 /**
  * @type {RoundaboutOptions<EndUserProps>}
  */
 const raConfig = {
-
+    assignOptions: {
+        akaMethods:{
+            '🔍': m['🔍']
+        },
+    },
+    merges: [
+        {
+            ifAllOf: ['expanded'],
+            assign: {
+                '?.shadowRoot?.🔍?.button.ariaExpanded': 'true'
+            }
+        },
+        {
+            ifKeyIn: ['disabled'],
+            assign: {
+                '?.shadowRoot?.🔍?.input?.disabled': '?.disabled',
+            }
+        }
+    ]
 }
 
 /** @type {ElMakerConfig<EndUserProps>} */
@@ -29,7 +48,7 @@ const features = {
     assignFeatures: {
         roundabout: {
             customData: {
-
+                raConfig,
             }
         }
     }

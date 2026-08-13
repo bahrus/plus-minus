@@ -1,7 +1,33 @@
 {
     "assignFeatures": {
         "roundabout": {
-            "customData": {}
+            "customData": {
+                "raConfig": {
+                    "assignOptions": {
+                        "akaMethods": {
+                            "🔍": "querySelector"
+                        }
+                    },
+                    "merges": [
+                        {
+                            "ifAllOf": [
+                                "expanded"
+                            ],
+                            "assign": {
+                                "?.shadowRoot?.🔍?.button.ariaExpanded": "true"
+                            }
+                        },
+                        {
+                            "ifKeyIn": [
+                                "disabled"
+                            ],
+                            "assign": {
+                                "?.shadowRoot?.🔍?.input?.disabled": "?.disabled"
+                            }
+                        }
+                    ]
+                }
+            }
         }
     }
 }
