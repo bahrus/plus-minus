@@ -37,7 +37,7 @@
     "url": "git+https://github.com/bahrus/plus-minus.git"
   },
   "dependencies": {
-    "assign-gingerly": "0.0.78",
+    "assign-gingerly": "0.0.79",
     "el-maker": "0.0.14",
     "imp-h": "0.0.5",
     "mount-observer": "0.1.50"
