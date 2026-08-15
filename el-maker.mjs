@@ -4,7 +4,7 @@ import { writeFileSync } from 'fs';
 import { resolve } from 'path';
 import { fileURLToPath } from 'url';
 import {akaMethods as m, aka, builtInEmoji} from 'assign-gingerly/DX/emojis.js';
-import {paths} from 'assign-gingerly/DX/paths.js';
+import {paths, doAssign, set, smoothOver} from 'assign-gingerly/DX/paths.js';
 
 /** @import {EndUserProps, AP} from './types'; */
 /** @import {RoundaboutOptions} from './types/roundabout/types' */
@@ -39,14 +39,14 @@ const raConfig = {
     compacts: {
         on_click_of_expandButton_assign: {
             [$.expandButton.hidden.path]: true,
-            '?.collapseButton?.hidden': false,
+            [$.collapseButton.hidden.path]: false,
             expanded: true,
             
         },
         on_click_of_collapseButton_assign: {
             expanded: false,
-            '?.expandButton?.hidden': false,
-            '?.collapseButton?.hidden': true,
+            [$.expandButton.hidden.path]: false,
+            [$.collapseButton.hidden.path]: true,
         } 
     },
     merges: [
@@ -67,9 +67,13 @@ const raConfig = {
         {
             ifKeyIn: ['disabled'],
             ifAllOf: ['clone'],
+            // ...doAssign(
+            //     set($.expandButton.disabled).to($.disabled),
+            //     set($.collapseButton.disabled).to($.disabled),
+            // )
             assign: {
-                '?.expandButton?.disabled': '?.disabled',
-                '?.collapseButton?.disabled': '?.disabled',
+                [$.expandButton.disabled.path]: $.disabled.path,
+                [$.collapseButton.disabled.path]: $.disabled.path,
             }
         },
 
