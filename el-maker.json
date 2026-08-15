@@ -33,7 +33,7 @@
                                 "clone"
                             ],
                             "assign": {
-                                "expandButton": "?.clone?.🔍?.[name=expand]",
+                                "expandButton": "?.clone?.querySelector?.[name=expand]",
                                 "collapseButton": "?.clone?.🔍?.[name=collapse]"
                             }
                         },
