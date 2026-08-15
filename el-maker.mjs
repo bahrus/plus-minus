@@ -34,14 +34,14 @@ const raConfig = {
     },
     compacts: {
         on_click_of_expandButton_assign: {
+            '?.expandButton?.hidden': true,
+            '?.collapseButton?.hidden': false,
             expanded: true,
-            '?.expandButton?.hidden': false,
-            '?.collapseButton?.hidden': true,
         },
         on_click_of_collapseButton_assign: {
             expanded: false,
-            '?.expandButton?.hidden': true,
-            '?.collapseButton?.hidden': false,
+            '?.expandButton?.hidden': false,
+            '?.collapseButton?.hidden': true,
         } 
     },
     merges: [

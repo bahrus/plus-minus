@@ -17,14 +17,14 @@
                     },
                     "compacts": {
                         "on_click_of_expandButton_assign": {
-                            "expanded": true,
-                            "?.expandButton?.hidden": false,
-                            "?.collapseButton?.hidden": true
+                            "?.expandButton?.hidden": true,
+                            "?.collapseButton?.hidden": false,
+                            "expanded": true
                         },
                         "on_click_of_collapseButton_assign": {
                             "expanded": false,
-                            "?.expandButton?.hidden": true,
-                            "?.collapseButton?.hidden": false
+                            "?.expandButton?.hidden": false,
+                            "?.collapseButton?.hidden": true
                         }
                     },
                     "merges": [
