@@ -10,16 +10,6 @@ import {paths, doAssign, set, smoothOver} from 'assign-gingerly/DX/paths.js';
 /** @import {RoundaboutOptions} from './types/roundabout/types' */
 /** @import {ElMakerConfig} from './types/el-maker/types' */
 
-// /**
-//  * @type {{ [K in keyof EndUserProps]: K }}
-//  */
-// const props = {
-//     expanded: 'expanded',
-//     ariaControls: 'ariaControls',
-//     disabled: 'disabled',
-//     initialized: 
-// };
-
 const withMethods = [m['🔍']];
 
 const $ = (/** @type {typeof paths<AP>} */ (/** @type {any} */(paths)))({withMethods});
