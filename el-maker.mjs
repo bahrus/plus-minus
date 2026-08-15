@@ -53,9 +53,9 @@ const raConfig = {
             }
         },
         {
-            ifAllOf: ['expanded'],
+            ifKeyIn: ['expanded'],
             assign: {
-                '?.shadowRoot?.🔍?.button.ariaExpanded': 'true',
+                '?.ariaExpanded': '?.expanded',
             }
         },
         {

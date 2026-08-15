@@ -38,11 +38,11 @@
                             }
                         },
                         {
-                            "ifAllOf": [
+                            "ifKeyIn": [
                                 "expanded"
                             ],
                             "assign": {
-                                "?.shadowRoot?.🔍?.button.ariaExpanded": "true"
+                                "?.ariaExpanded": "?.expanded"
                             }
                         },
                         {
