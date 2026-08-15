@@ -42,7 +42,8 @@
                                 "expanded"
                             ],
                             "assign": {
-                                "?.ariaExpanded": "?.expanded"
+                                "?.ariaExpanded": "?.expanded",
+                                "?.ariaControlsElements?.@each?.hidden =!": "?.expanded"
                             }
                         },
                         {

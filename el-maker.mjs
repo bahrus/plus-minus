@@ -37,6 +37,7 @@ const raConfig = {
             '?.expandButton?.hidden': true,
             '?.collapseButton?.hidden': false,
             expanded: true,
+            
         },
         on_click_of_collapseButton_assign: {
             expanded: false,
@@ -56,6 +57,7 @@ const raConfig = {
             ifKeyIn: ['expanded'],
             assign: {
                 '?.ariaExpanded': '?.expanded',
+                '?.ariaControlsElements?.@each?.hidden =!': '?.expanded',
             }
         },
         {
