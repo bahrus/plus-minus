@@ -57,7 +57,7 @@ const raConfig = {
             assign: {
                 //expandButton: '?.clone?.🔍?.[name=expand]',
                 expandButton: $.clone.querySelector('[name=expand]').path,
-                collapseButton: '?.clone?.🔍?.[name=collapse]'
+                collapseButton: $.clone.querySelector('[name=collapse]').path,
             }
         },
         {

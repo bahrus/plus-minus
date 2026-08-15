@@ -34,7 +34,7 @@
                             ],
                             "assign": {
                                 "expandButton": "?.clone?.querySelector?.[name=expand]",
-                                "collapseButton": "?.clone?.🔍?.[name=collapse]"
+                                "collapseButton": "?.clone?.querySelector?.[name=collapse]"
                             }
                         },
                         {
