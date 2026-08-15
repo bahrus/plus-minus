@@ -20,7 +20,9 @@ import {paths, doAssign, set, smoothOver} from 'assign-gingerly/DX/paths.js';
 //     initialized: 
 // };
 
-const $ = (/** @type {typeof paths<AP>} */ (/** @type {any} */(paths)))();
+const withMethods = [m['🔍']];
+
+const $ = (/** @type {typeof paths<AP>} */ (/** @type {any} */(paths)))({withMethods});
 
 
 /**
