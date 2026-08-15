@@ -62,13 +62,9 @@ const raConfig = {
         {
             ifKeyIn: ['expanded'],
             ...doAssign(
-                set($.ariaExpanded.path).to($.expanded),
+                set($.ariaExpanded).to($.expanded),
                 set(`${$.ariaControlsElements.path}?.@each?.hidden =!`).to($.expanded)
             )
-            // assign: {
-            //     [$.ariaExpanded.path]: $.expanded,
-            //     [`${$.ariaControlsElements.path}?.@each?.hidden =!`]: $.expanded,
-            // }
         },
         {
             ifKeyIn: ['disabled'],
