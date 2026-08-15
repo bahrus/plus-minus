@@ -61,22 +61,22 @@ const raConfig = {
         },
         {
             ifKeyIn: ['expanded'],
-            assign: {
-                [$.ariaExpanded.path]: $.expanded,
-                [`${$.ariaControlsElements.path}?.@each?.hidden =!`]: $.expanded,
-            }
+            ...doAssign(
+                set($.ariaExpanded.path).to($.expanded),
+                set(`${$.ariaControlsElements.path}?.@each?.hidden =!`).to($.expanded)
+            )
+            // assign: {
+            //     [$.ariaExpanded.path]: $.expanded,
+            //     [`${$.ariaControlsElements.path}?.@each?.hidden =!`]: $.expanded,
+            // }
         },
         {
             ifKeyIn: ['disabled'],
             ifAllOf: ['clone'],
-            // ...doAssign(
-            //     set($.expandButton.disabled).to($.disabled),
-            //     set($.collapseButton.disabled).to($.disabled),
-            // )
-            assign: {
-                [$.expandButton.disabled.path]: $.disabled,
-                [$.collapseButton.disabled.path]: $.disabled,
-            }
+            ...doAssign(
+                set($.expandButton.disabled).to($.disabled),
+                set($.collapseButton.disabled).to($.disabled),
+            )
         },
 
     ]),
