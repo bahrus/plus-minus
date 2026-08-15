@@ -55,16 +55,15 @@ const raConfig = {
         {
             ifKeyIn: ['clone'],
             assign: {
-                expandButton: $.clone.querySelector('[name=expand]').path,
-                collapseButton: $.clone.querySelector('[name=collapse]').path,
+                expandButton: $.clone.querySelector('[name=expand]'),
+                collapseButton: $.clone.querySelector('[name=collapse]'),
             }
         },
         {
             ifKeyIn: ['expanded'],
             assign: {
-                [$.ariaExpanded.path]: $.expanded.path,
-                [`${$.ariaControlsElements.path}?.@each?.hidden =!`]: $.expanded.path,
-                //'?.ariaControlsElements?.@each?.hidden =!': '?.expanded',
+                [$.ariaExpanded.path]: $.expanded,
+                [`${$.ariaControlsElements.path}?.@each?.hidden =!`]: $.expanded,
             }
         },
         {
@@ -75,8 +74,8 @@ const raConfig = {
             //     set($.collapseButton.disabled).to($.disabled),
             // )
             assign: {
-                [$.expandButton.disabled.path]: $.disabled.path,
-                [$.collapseButton.disabled.path]: $.disabled.path,
+                [$.expandButton.disabled.path]: $.disabled,
+                [$.collapseButton.disabled.path]: $.disabled,
             }
         },
 
