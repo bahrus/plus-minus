@@ -18,6 +18,10 @@ export interface EndUserProps {
     //  */
     ariaControls: string,
     disabled: boolean,
+    //initialized: boolean,
+    expandButton: HTMLButtonElement,
+    collapseButton: HTMLButtonElement,
+    clone: Element | DocumentFragment | ShadowRoot
     
 }
 

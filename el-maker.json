@@ -3,9 +3,28 @@
         "roundabout": {
             "customData": {
                 "raConfig": {
+                    "weakRef": {
+                        "properties": [
+                            "expandButton",
+                            "collapseButton"
+                        ],
+                        "logIfCollected": "warn"
+                    },
                     "assignOptions": {
                         "akaMethods": {
                             "🔍": "querySelector"
+                        }
+                    },
+                    "compacts": {
+                        "on_click_of_expandButton_assign": {
+                            "expanded": true,
+                            "?.expandButton?.hidden": false,
+                            "?.collapseButton?.hidden": true
+                        },
+                        "on_click_of_collapseButton_assign": {
+                            "expanded": false,
+                            "?.expandButton?.hidden": true,
+                            "?.collapseButton?.hidden": false
                         }
                     },
                     "merges": [
@@ -22,7 +41,16 @@
                                 "disabled"
                             ],
                             "assign": {
-                                "?.shadowRoot?.🔍?.input?.disabled": "?.disabled"
+                                "?.clone?.🔍?.input?.disabled": "?.disabled"
+                            }
+                        },
+                        {
+                            "ifKeyIn": [
+                                "clone"
+                            ],
+                            "assign": {
+                                "expandButton": "?.clone?.🔍?.[name=expand]",
+                                "collapseButton": "?.clone?.🔍?.[name=collapse]"
                             }
                         }
                     ]

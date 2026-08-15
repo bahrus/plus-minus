@@ -9,38 +9,65 @@ import {akaMethods as m, aka, builtInEmoji} from 'assign-gingerly/DX/emojis.js';
 /** @import {RoundaboutOptions} from './types/roundabout/types' */
 /** @import {ElMakerConfig} from './types/el-maker/types' */
 
-/**
- * @type {{ [K in keyof EndUserProps]: K }}
- */
-const props = {
-    expanded: 'expanded',
-    ariaControls: 'ariaControls',
-    disabled: 'disabled',
-};
+// /**
+//  * @type {{ [K in keyof EndUserProps]: K }}
+//  */
+// const props = {
+//     expanded: 'expanded',
+//     ariaControls: 'ariaControls',
+//     disabled: 'disabled',
+//     initialized: 
+// };
 
 /**
  * @type {RoundaboutOptions<EndUserProps>}
  */
 const raConfig = {
+    weakRef: {
+        properties: ['expandButton', 'collapseButton'],
+        logIfCollected: 'warn'
+    },
     assignOptions: {
         akaMethods:{
             '🔍': m['🔍']
         },
     },
+    compacts: {
+        on_click_of_expandButton_assign: {
+            expanded: true,
+            '?.expandButton?.hidden': false,
+            '?.collapseButton?.hidden': true,
+        },
+        on_click_of_collapseButton_assign: {
+            expanded: false,
+            '?.expandButton?.hidden': true,
+            '?.collapseButton?.hidden': false,
+        } 
+    },
     merges: [
         {
             ifAllOf: ['expanded'],
             assign: {
-                '?.shadowRoot?.🔍?.button.ariaExpanded': 'true'
+                '?.shadowRoot?.🔍?.button.ariaExpanded': 'true',
             }
         },
         {
             ifKeyIn: ['disabled'],
             assign: {
-                '?.shadowRoot?.🔍?.input?.disabled': '?.disabled',
+                '?.clone?.🔍?.input?.disabled': '?.disabled',
+            }
+        },
+        {
+            ifKeyIn: ['clone'],
+            assign: {
+                expandButton: '?.clone?.🔍?.[name=expand]',
+                collapseButton: '?.clone?.🔍?.[name=collapse]'
             }
         }
-    ]
+    ],
+    // defaultPropVals: {
+    //     initialized: true
+    // }
 }
 
 /** @type {ElMakerConfig<EndUserProps>} */
