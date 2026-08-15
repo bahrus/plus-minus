@@ -3,8 +3,8 @@
 import { writeFileSync } from 'fs';
 import { resolve } from 'path';
 import { fileURLToPath } from 'url';
-import {akaMethods as m, aka, builtInEmoji} from 'assign-gingerly/DX/emojis.js';
-import {paths, doAssign, set, smoothOver} from 'assign-gingerly/DX/paths.js';
+import {akaMethods as m, aka, builtInEmoji} from './assign-gingerly/DX/emojis.js';
+import {paths, doAssign, set, smoothOver} from './assign-gingerly/DX/paths.js';
 
 /** @import {EndUserProps, AP} from './types'; */
 /** @import {RoundaboutOptions} from './types/roundabout/types' */
@@ -51,11 +51,10 @@ const raConfig = {
             [$.collapseButton.hidden.path]: true,
         } 
     },
-    merges: [
+    merges: smoothOver([
         {
             ifKeyIn: ['clone'],
             assign: {
-                //expandButton: '?.clone?.🔍?.[name=expand]',
                 expandButton: $.clone.querySelector('[name=expand]').path,
                 collapseButton: $.clone.querySelector('[name=collapse]').path,
             }
@@ -63,8 +62,9 @@ const raConfig = {
         {
             ifKeyIn: ['expanded'],
             assign: {
-                '?.ariaExpanded': '?.expanded',
-                '?.ariaControlsElements?.@each?.hidden =!': '?.expanded',
+                [$.ariaExpanded.path]: $.expanded.path,
+                [`${$.ariaControlsElements.path}?.@each?.hidden =!`]: $.expanded.path,
+                //'?.ariaControlsElements?.@each?.hidden =!': '?.expanded',
             }
         },
         {
@@ -80,7 +80,7 @@ const raConfig = {
             }
         },
 
-    ],
+    ]),
     defaultPropVals: {
         disabled: false
     }
