@@ -4,8 +4,9 @@ import { writeFileSync } from 'fs';
 import { resolve } from 'path';
 import { fileURLToPath } from 'url';
 import {akaMethods as m, aka, builtInEmoji} from 'assign-gingerly/DX/emojis.js';
+import {paths} from 'assign-gingerly/DX/paths.js';
 
-/** @import {EndUserProps} from './types'; */
+/** @import {EndUserProps, AP} from './types'; */
 /** @import {RoundaboutOptions} from './types/roundabout/types' */
 /** @import {ElMakerConfig} from './types/el-maker/types' */
 
@@ -18,6 +19,9 @@ import {akaMethods as m, aka, builtInEmoji} from 'assign-gingerly/DX/emojis.js';
 //     disabled: 'disabled',
 //     initialized: 
 // };
+
+const $ = (/** @type {typeof paths<AP>} */ (/** @type {any} */(paths)))();
+
 
 /**
  * @type {RoundaboutOptions<EndUserProps>}
@@ -34,7 +38,7 @@ const raConfig = {
     },
     compacts: {
         on_click_of_expandButton_assign: {
-            '?.expandButton?.hidden': true,
+            [$.expandButton.hidden.path]: true,
             '?.collapseButton?.hidden': false,
             expanded: true,
             

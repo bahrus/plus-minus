@@ -25,7 +25,7 @@ export interface EndUserProps {
     
 }
 
-export interface AP extends EndUserProps{
+export interface AP extends EndUserProps, HTMLElement{
     controls: Array<WeakRef<Element>>,
     refsNotFound: Set<string>,
 }
