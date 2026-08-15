@@ -46,6 +46,13 @@ const raConfig = {
     },
     merges: [
         {
+            ifKeyIn: ['clone'],
+            assign: {
+                expandButton: '?.clone?.🔍?.[name=expand]',
+                collapseButton: '?.clone?.🔍?.[name=collapse]'
+            }
+        },
+        {
             ifAllOf: ['expanded'],
             assign: {
                 '?.shadowRoot?.🔍?.button.ariaExpanded': 'true',
@@ -53,21 +60,17 @@ const raConfig = {
         },
         {
             ifKeyIn: ['disabled'],
+            ifAllOf: ['clone'],
             assign: {
-                '?.clone?.🔍?.input?.disabled': '?.disabled',
+                '?.expandButton?.disabled': '?.disabled',
+                '?.collapseButton?.disabled': '?.disabled',
             }
         },
-        {
-            ifKeyIn: ['clone'],
-            assign: {
-                expandButton: '?.clone?.🔍?.[name=expand]',
-                collapseButton: '?.clone?.🔍?.[name=collapse]'
-            }
-        }
+
     ],
-    // defaultPropVals: {
-    //     initialized: true
-    // }
+    defaultPropVals: {
+        disabled: false
+    }
 }
 
 /** @type {ElMakerConfig<EndUserProps>} */
@@ -77,7 +80,8 @@ const features = {
             customData: {
                 raConfig,
             }
-        }
+        },
+        templateMaker: {}
     }
 }
 

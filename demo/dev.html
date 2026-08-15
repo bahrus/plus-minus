@@ -4,27 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev</title>
-    <script type="importmap">
-    {
-        "imports": {
-            "plus-minus/": "../"
-        }
-    }
-    </script>
     <!-- #include virtual="/imports.html" -->
+
+    <script type=module>
+        import 'be-hive/be-hive.js';
+        import 'imp-h/imp-h.js';
+        import 'el-maker/def.js';
+    </script>
 </head>
 <body>
-    <plus-minus imp-h="plus-minus/root.mjs"></plus-minus>
+    <be-hive></be-hive>
+    <plus-minus imp-h="plus-minus/root.html">
+        <script type=precede data-extends=el-maker src="plus-minus/el-maker.json"></script>
+    </plus-minus>
     <details>
         <summary>Another test</summary>
-        <plus-minus aria-controls=i-am-here></plus-minus>
+        <!-- <plus-minus aria-controls=i-am-here>
+            
+        </plus-minus> -->
         <section id=i-am-here hidden=until-found>
             hello
         </section>
     </details>
-    <script type=module>
-        import 'imp-h/imp-h.js';
-        import 'xtal-element/index.js';
-    </script>
+
 </body>
 </html>

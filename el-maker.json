@@ -29,6 +29,15 @@
                     },
                     "merges": [
                         {
+                            "ifKeyIn": [
+                                "clone"
+                            ],
+                            "assign": {
+                                "expandButton": "?.clone?.🔍?.[name=expand]",
+                                "collapseButton": "?.clone?.🔍?.[name=collapse]"
+                            }
+                        },
+                        {
                             "ifAllOf": [
                                 "expanded"
                             ],
@@ -40,22 +49,21 @@
                             "ifKeyIn": [
                                 "disabled"
                             ],
-                            "assign": {
-                                "?.clone?.🔍?.input?.disabled": "?.disabled"
-                            }
-                        },
-                        {
-                            "ifKeyIn": [
+                            "ifAllOf": [
                                 "clone"
                             ],
                             "assign": {
-                                "expandButton": "?.clone?.🔍?.[name=expand]",
-                                "collapseButton": "?.clone?.🔍?.[name=collapse]"
+                                "?.expandButton?.disabled": "?.disabled",
+                                "?.collapseButton?.disabled": "?.disabled"
                             }
                         }
-                    ]
+                    ],
+                    "defaultPropVals": {
+                        "disabled": false
+                    }
                 }
             }
-        }
+        },
+        "templateMaker": {}
     }
 }
