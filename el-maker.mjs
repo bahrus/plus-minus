@@ -30,15 +30,15 @@ const raConfig = {
     },
     compacts: {
         on_click_of_expandButton_assign: {
-            [$.expandButton.hidden.path]: true,
-            [$.collapseButton.hidden.path]: false,
+            [$.expandButton.hidden.Path]: true,
+            [$.collapseButton.hidden.Path]: false,
             expanded: true,
             
         },
         on_click_of_collapseButton_assign: {
             expanded: false,
-            [$.expandButton.hidden.path]: false,
-            [$.collapseButton.hidden.path]: true,
+            [$.expandButton.hidden.Path]: false,
+            [$.collapseButton.hidden.Path]: true,
         } 
     },
     merges: smoothOver([
@@ -53,7 +53,7 @@ const raConfig = {
             ifKeyIn: ['expanded'],
             ...doAssign(
                 set($.ariaExpanded).to($.expanded),
-                set(`${$.ariaControlsElements.path}?.@each?.hidden =!`).to($.expanded)
+                set($.ariaControlsElements.Each.hidden.EqNot`).to($.expanded)
             )
         },
         {
