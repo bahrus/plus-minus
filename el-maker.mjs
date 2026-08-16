@@ -6,17 +6,17 @@ import { fileURLToPath } from 'url';
 import {akaMethods as m, aka, builtInEmoji} from 'assign-gingerly/DX/emojis.js';
 import {paths, doAssign, set, smoothOver} from 'assign-gingerly/DX/paths.js';
 
-/** @import {EndUserProps, AP} from './types'; */
+/** @import {EndUserProps, AP, RuntimeProps} from './types'; */
 /** @import {RoundaboutOptions} from './types/roundabout/types' */
 /** @import {ElMakerConfig} from './types/el-maker/types' */
 
 const withMethods = [m['🔍']];
 
-const $ = (/** @type {typeof paths<AP>} */ (/** @type {any} */(paths)))({withMethods});
+const $ = (/** @type {typeof paths<RuntimeProps>} */ (/** @type {any} */(paths)))({withMethods});
 
 
 /**
- * @type {RoundaboutOptions<EndUserProps>}
+ * @type {RoundaboutOptions<AP>}
  */
 const raConfig = {
     weakRef: {
@@ -71,7 +71,7 @@ const raConfig = {
     }
 }
 
-/** @type {ElMakerConfig<EndUserProps>} */
+/** @type {ElMakerConfig<AP>} */
 const features = {
     assignFeatures: {
         roundabout: {

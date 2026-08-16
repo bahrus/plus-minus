@@ -1,4 +1,4 @@
-import {SimpleWCInfo} from './ts-refs/wc-info/SimpleWCInfo';
+import {SimpleWCInfo} from './types/wc-info/SimpleWCInfo';
 
 export interface EndUserProps {
     /**
@@ -6,29 +6,27 @@ export interface EndUserProps {
      */
     expanded: boolean,
     // /**
-    //  * If true, the button is in collapsed state
-    //  */
-    // collapsed: boolean,
-    // /**
-    //  * Global attribute inheritance
-    //  */
-    // ariaExpanded: boolean,
-    // /**
     //  * IDs of the elements that are controlled by this button
     //  */
     ariaControls: string,
     disabled: boolean,
     //initialized: boolean,
-    expandButton: HTMLButtonElement,
-    collapseButton: HTMLButtonElement,
-    clone: Element | DocumentFragment | ShadowRoot
+
     
 }
 
-export interface AP extends EndUserProps, HTMLElement{
+export interface AllProps extends EndUserProps{
     controls: Array<WeakRef<Element>>,
     refsNotFound: Set<string>,
+    expandButton: HTMLButtonElement,
+    collapseButton: HTMLButtonElement,
+    clone: Element | DocumentFragment | ShadowRoot
 }
+
+export type AP = AllProps;
+
+export interface RuntimeProps extends AllProps, HTMLElement{}
+
 
 export type PAP = Partial<AP>
 
