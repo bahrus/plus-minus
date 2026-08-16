@@ -44,10 +44,10 @@ const raConfig = {
     merges: smoothOver([
         {
             ifKeyIn: ['clone'],
-            assign: {
-                expandButton: $.clone.querySelector('[name=expand]'),
-                collapseButton: $.clone.querySelector('[name=collapse]'),
-            }
+            ...doAssign(
+                set($.expandButton).to($.clone.querySelector('[name=expand]')),
+                set($.collapseButton).to($.clone.querySelector('[name=collapse]')),
+            )
         },
         {
             ifKeyIn: ['expanded'],

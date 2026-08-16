@@ -33,8 +33,8 @@
                                 "clone"
                             ],
                             "assign": {
-                                "expandButton": "?.clone?.querySelector?.[name=expand]",
-                                "collapseButton": "?.clone?.querySelector?.[name=collapse]"
+                                "?.expandButton": "?.clone?.querySelector?.[name=expand]",
+                                "?.collapseButton": "?.clone?.querySelector?.[name=collapse]"
                             }
                         },
                         {
