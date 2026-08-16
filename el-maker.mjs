@@ -53,7 +53,7 @@ const raConfig = {
             ifKeyIn: ['expanded'],
             ...doAssign(
                 set($.ariaExpanded).to($.expanded),
-                set($.ariaControlsElements.Each.hidden.EqNot`).to($.expanded)
+                set($.ariaControlsElements.Each.hidden.QMEq).to([$.expanded, false, 'until-found'])
             )
         },
         {

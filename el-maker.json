@@ -43,7 +43,11 @@
                             ],
                             "assign": {
                                 "?.ariaExpanded": "?.expanded",
-                                "?.ariaControlsElements?.@each?.hidden =!": "?.expanded"
+                                "?.ariaControlsElements?.@each?.hidden ?=": [
+                                    "?.expanded",
+                                    false,
+                                    "until-found"
+                                ]
                             }
                         },
                         {
