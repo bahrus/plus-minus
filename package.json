@@ -37,15 +37,15 @@
     "url": "git+https://github.com/bahrus/plus-minus.git"
   },
   "dependencies": {
-    "assign-gingerly": "0.0.81",
-    "be-hive": "0.1.16",
-    "el-maker": "0.0.17",
+    "assign-gingerly": "0.0.109",
+    "be-hive": "0.1.18",
+    "el-maker": "0.0.28",
     "imp-h": "0.0.6",
-    "mount-observer": "0.1.51"
+    "mount-observer": "0.1.53"
   },
   "devDependencies": {
-    "@playwright/test": "1.62.1",
-    "spa-ssi": "0.0.27",
+    "@playwright/test": "1.65.1",
+    "spa-ssi": "0.0.32",
     "wc-info": "0.0.186"
   },
   "author": "anderson.bruce.b@gmail.com",
